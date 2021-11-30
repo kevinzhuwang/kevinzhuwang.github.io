@@ -1,0 +1,315 @@
+html {
+    background: linear-gradient(to bottom right, rgba(255, 188, 15, 1), rgba(169, 0, 0, 0.9));
+    background-attachment: fixed;
+}
+
+.logo-image {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    filter: drop-shadow(1px 1px 1px grey);
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-family: 'Press Start 2P';
+    color: #FFF5F5;
+    text-shadow: 
+    -3px -3px 0 #fcac00,  
+     3px -3px 0 #EDB746,
+    -3px  3px 0 #ffae00,
+     3px  3px 0 #EDB746;
+    font-size: 48px;
+    filter: drop-shadow(1px 1px 1px grey);
+    line-height: 60%;
+    position: relative;
+    left: 600px;
+    top: 35px;
+}
+
+h6 {
+    font-family: 'Odibee Sans';
+    color: #FFF5F5;
+    font-size: 36px;
+    filter: drop-shadow(1px 1px 1px grey);
+    position: relative;
+    left: 645px;
+    top: 25px;
+    margin: 0px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-family: 'Press Start 2P';
+    color: #FFF5F5;
+    text-shadow: 
+    -3px -3px 0 #fcac00,  
+     3px -3px 0 #EDB746,
+    -3px  3px 0 #ffae00,
+     3px  3px 0 #EDB746;
+    font-size: 36px;
+    filter: drop-shadow(1px 1px 1px grey);
+    line-height: 60%;
+}
+
+h3 {
+    font-family: 'Press Start 2P';
+    color: white;
+    text-shadow: 
+    -3px -3px 0 #fcac00,  
+     3px -3px 0 #EDB746,
+    -3px  3px 0 #ffae00,
+     3px  3px 0 #EDB746;
+    font-size: 24px;
+    filter: drop-shadow(1px 1px 1px grey);
+}
+
+h4 {
+    font-family: 'Odibee Sans';
+    color: #FFFFF5;
+    font-size: 30px;
+    filter: drop-shadow(1px 1px 1px grey);
+    letter-spacing: 2px;
+}
+
+.layers-menu-content {
+    background-color: rgba(251, 203, 81, 0.6);
+    padding: 20px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    width: 280px;
+    border-radius: 8px;
+    box-shadow: inset;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.25);
+}
+
+.layers-menu h2 {
+    margin-left: 122px;
+}
+
+.layers-menu-content h3 {
+    margin-left: 24px;
+    line-height: 30%;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: -12px;
+}
+
+.content .text {
+    display: flex;
+    flex-direction: column;
+}
+
+.content .toggles {
+    margin-left: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.content .text h4 {
+    margin: 0px;
+    margin-top: 20px;
+    text-align: left;
+    position: relative;
+    top: -10px;
+    left: -12px;
+}
+
+.soil img {
+    position: absolute;
+    left: 600px;
+    top: 330px;
+    z-index: 0.2;
+}
+
+.base1 img {
+    position: absolute;
+    left: 416px;
+    top: -380px;
+    z-index: 0.1;
+}
+
+.base2 img {
+    position: absolute;
+    left: 396px;
+    top: -400px;
+    z-index: 0;
+}
+
+.trees img {
+    position: absolute;
+    left: 400px;
+    top: -230px;
+    z-index: 3;
+    animation: wind 10s infinite;
+    animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+@keyframes wind {
+    0% {
+        transform: rotate(0deg);
+    }
+    30% {
+        transform: rotate(2deg);
+    }
+
+    70% {
+        transform: rotate(-1deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.water img {
+    position: absolute;
+    left: 415px;
+    top: -100px;
+    z-index: 1;
+}
+
+.mountain img {
+    position: absolute;
+    left: 590px;
+    top: -85px;
+    z-index: 2;
+}
+
+.ripples img {
+    position: absolute;
+    left: 425px;
+    top: -435px;
+    z-index: 4;
+    animation: ripples 4s infinite;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@keyframes ripples {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    30% {
+        transform: scale(0.97);
+        opacity: 0.7;
+    }
+
+    60% {
+        transform: scale(0.9);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* MUST UPDATE */
+    .toggle {
+        position: relative;
+        display: inline-block;
+        width: 45px;
+        height: 25.5px;
+    }
+
+    .toggle input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+  
+  /* The slider */
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: wheat;
+        transition: 0.3s;
+    }
+
+    .slider:hover {
+        box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.25);
+        transition-duration: 0.3s;
+    }
+  
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 19.5px;
+        width: 19.5px;
+        left: 3px;
+        bottom: 3px;
+        background-color: whitesmoke;
+        filter: drop-shadow(1px 1px 1px grey);
+        transition: 0.3s;
+    }
+  
+    input:checked + .slider {
+        background-color: rgb(255, 150, 13);
+    }
+
+    input:checked~.base2 {
+        display: none;
+    }
+
+    input:checked~.water {
+        display: none;
+    }
+
+    input:checked~.trees {
+        display: none;
+    }
+
+    input:checked~.mountain {
+        display: none;
+    }
+
+    input:checked~.ripples {
+        display: none;
+    }
+  
+  
+    input:checked + .slider:before {
+        transform: translateX(18.5px);
+    }
+  
+    .slider.round {
+        border-radius: 25.5px;
+    }
+  
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+    .start h1 {
+        line-height: 150%;
+        position: fixed;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 64px;
+    }
+
+    .start h6 {
+        line-height: 150%;
+        position: fixed;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 64px;
+    }
